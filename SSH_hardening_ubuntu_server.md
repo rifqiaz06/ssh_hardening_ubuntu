@@ -54,7 +54,7 @@ sudo systemctl restart ssh
 8. **Tes Akses**
 
 ```bash
-ssh student@ipserver -p 2222
+ssh user@ipserver -p 2222
 ```
 
 ## 🧯 Troubleshooting
