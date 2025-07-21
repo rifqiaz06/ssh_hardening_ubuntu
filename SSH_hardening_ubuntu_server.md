@@ -1,4 +1,4 @@
-# 🔐 SSH Hardening di Ubuntu Server 22.04 (README Version)
+# 🔐 SSH Hardening di Ubuntu Server 22.04
 
 Panduan ini bertujuan mengamankan akses SSH ke server agar tidak mudah disusupi.
 
@@ -29,14 +29,14 @@ sudo ufw allow 2222/tcp
 4. **Batasi User**
 
 ```bash
-AllowUsers devops
+AllowUsers user
 ```
 
 5. **Aktifkan SSH Key**
 
 ```bash
 ssh-keygen -t rsa -b 4096
-ssh-copy-id -p 2222 devops@ip
+ssh-copy-id user@ipserver -p 2222
 ```
 
 6. **Nonaktifkan Login Password (Opsional)**
@@ -54,7 +54,7 @@ sudo systemctl restart ssh
 8. **Tes Akses**
 
 ```bash
-ssh -p 2222 devops@ip
+ssh student@ipserver -p 2222
 ```
 
 ## 🧯 Troubleshooting
